@@ -1,0 +1,22 @@
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: Operator
+metadata:
+  name: consul
+spec:
+  global:
+    datacenter: dc1
+    domain: consul
+    enabled: true
+    consulImage: hashicorp/consul:1.9.0
+    consulK8sImage: hashicorp/consul-k8s:0.21.0
+    imageEnvoy: envoyproxy/envoy-alpine:v1.16.0
+  connect:
+    enabled: true
+    health: true
+  server:
+    enabled: true
+    replicas: 3
+  ui:
+    enabled: true
+    type: LoadBalancer
+   

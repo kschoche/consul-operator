@@ -1,0 +1,11 @@
+domain: hashicorp.com
+layout: go.kubebuilder.io/v2
+projectName: consul-operator
+repo: github.com/ashwin-venkatesh/consul-operator
+resources:
+- group: consul
+  kind: Operator
+  version: v1alpha1
+version: 3-alpha
+plugins:
+  go.sdk.operatorframework.io/v2-alpha: {}
